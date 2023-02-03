@@ -43,3 +43,13 @@ stl -> stateless
 pubsec.yaml :
 flutter pub add shared_preferences -> untuk menyimpan data di local
 flutter pub add introduction_screen -> untuk membuat intro screen
+
+
+cara install bottom goole nav bar :
+flutter pub add google_nav_bar
+
+unutk membuar resfull dummy api:
+ https://mockapi.io/
+
+rest api :
+flutter pub add http

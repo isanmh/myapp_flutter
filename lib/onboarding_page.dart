@@ -36,6 +36,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           image: Center(
             child: Image.asset("assets/images/img2.png", height: 350),
           ),
+          decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Title of introduction page",
@@ -43,9 +44,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
           image: Center(
             child: Image.asset("assets/images/img3.png", height: 350),
           ),
+          decoration: pageDecoration,
         ),
       ],
-      onDone: () {},
+      onDone: () {
+        Navigator.pushReplacementNamed(context, '/home');
+      },
       showSkipButton: true,
       showNextButton: true,
       showDoneButton: true,
@@ -54,6 +58,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
       next: Icon(Icons.arrow_forward),
       skip: Text("Skip"),
       done: Text("Done"),
+      // custom dots
+      dotsDecorator: DotsDecorator(
+        size: Size(10, 10),
+        color: Colors.grey,
+        activeSize: Size(22, 10),
+        activeShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25),
+        ),
+      ),
     );
   }
 }

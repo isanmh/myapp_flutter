@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:myapp/main.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -14,9 +15,13 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     // delay
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/home');
-    });
+    Timer(
+      const Duration(seconds: 3),
+      // (kodisi== true ? true : false) -> if else ternary
+      () => introduction == 0
+          ? Navigator.pushReplacementNamed(context, '/onboarding')
+          : Navigator.pushReplacementNamed(context, '/navbar'),
+    );
     super.initState();
   }
 
