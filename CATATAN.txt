@@ -1,0 +1,45 @@
+Extentions flutter :
+- flutter 
+- dart
+- flutter widgets snippets
+- Path Intellesense
+- Prettier - Code formatter
+- untuk api :
+    thunder client
+
+- vscode-icons
+- Gitlens
+- firacode
+
+Setting vscode :
+- setting auto save ketika ctrl + s
+- masuk ke setting :
+    ctrl + ,
+- cari "formatter"
+
+android studio error JDK : 
+- copy dir jdk ke C:\Program Files\Android\Android Studio\jbr
+- paste dir jdk ke C:\Program Files\Android\Android Studio\jre
+
+cara install flutter :
+- buka cmd
+- ketik : flutter doctor
+- ketik : flutter doctor --android-licenses
+- ketik : flutter doctor -v
+buat project flutter :
+- buka cmd
+- ketik : 
+flutter create nama_project
+
+https://github.com/metaliccode/be_sosmed -> Laravel
+https://github.com/metaliccode/fe_sosmed -> Flutter
+
+membuat widget di flutter :
+- statefull adalah widget yang memiliki state dan ingin dirubah
+stf -> statefull
+- stateless adalah widget yang tidak memiliki state dan tidak ingin dirubah
+stl -> stateless
+
+pubsec.yaml :
+flutter pub add shared_preferences -> untuk menyimpan data di local
+flutter pub add introduction_screen -> untuk membuat intro screen
