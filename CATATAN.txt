@@ -53,3 +53,24 @@ unutk membuar resfull dummy api:
 
 rest api :
 flutter pub add http
+
+cara membuat webview :
+flutter pub add webview_flutter
+- minSdkVersion 19
+
+ios/Runner/Info.plist
+<!-- untuk web view di ios -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+
+cara membuat apk && abb :
+
+keytool -genkey -v -keystore /c/Users/INIXINDO/Desktop/myapp-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias myapp
+
+flutter build apk --split-per-abi
+flutter build
+
+

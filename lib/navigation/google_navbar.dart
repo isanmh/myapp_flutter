@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:myapp/pages/home_page.dart';
+import 'package:myapp/webview/login_page.dart';
+import 'package:myapp/webview/sso_page.dart';
+import 'package:myapp/webview/web_view.dart';
 
 class GoogleNavbar extends StatefulWidget {
   const GoogleNavbar({super.key});
@@ -15,9 +18,9 @@ class _GoogleNavbarState extends State<GoogleNavbar> {
   // widget untuk halaman
   List<Widget> pages = [
     HomePage(),
-    Text("Page 2"),
-    Text("Page 3"),
-    Text("Page 4"),
+    WebViewPage(),
+    LoginPage(),
+    SSOPage(),
   ];
 
   @override

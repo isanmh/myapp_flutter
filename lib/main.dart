@@ -4,6 +4,7 @@ import 'package:myapp/navigation/google_navbar.dart';
 import 'package:myapp/onboarding_page.dart';
 import 'package:myapp/pages/home_page.dart';
 import 'package:myapp/splash_page.dart';
+import 'package:myapp/webview/web_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // buat menyimpan data global onboarding page + SharedPreferences
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         "/home": (context) => const HomePage(),
         "/onboarding": (context) => const OnboardingPage(),
         "/navbar": (context) => const GoogleNavbar(),
+        "/youtube": (context) => const WebViewPage(),
       },
       // home: OnboardingPage(),
     );
