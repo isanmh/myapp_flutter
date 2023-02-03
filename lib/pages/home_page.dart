@@ -48,11 +48,28 @@ class _HomePageState extends State<HomePage> {
           icon: const Icon(Icons.home),
         ),
       ),
-      body: const Text('Hello World'),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
+      body: isLoading
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : RefreshIndicator(
+              child: ListView.builder(
+                itemCount: listuser.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: ListTile(
+                      leading: Icon(Icons.book),
+                      title: Text(listuser[index].name),
+                      subtitle: Text(listuser[index].email),
+                      trailing: Icon(Icons.delete),
+                    ),
+                  );
+                },
+              ),
+              onRefresh: () async {
+                getAll();
+              },
+            ),
     );
   }
 }
